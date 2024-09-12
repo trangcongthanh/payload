@@ -227,6 +227,29 @@ export const translations = {
       tooShort: 'Закороткий',
     },
   },
+  vi: {
+    $schema: './translation-schema.json',
+    'plugin-seo': {
+      missing: 'Thiếu',
+      almostThere: 'Gần đạt',
+      autoGenerate: 'Auto-generate',
+      bestPractices: 'tìm hiểu thêm',
+      characterCount: '{{current}}/{{minLength}}-{{maxLength}} kí tự, ',
+      charactersLeftOver: 'còn lại {{characters}}',
+      charactersToGo: '{{characters}} to go',
+      charactersTooMany: 'vượt quá {{characters}}',
+      checksPassing: '{{current}}/{{max}} checks are passing',
+      good: 'Good',
+      imageAutoGenerationTip: 'Auto-generation will retrieve the selected hero image.',
+      lengthTipDescription: 'Độ dài nên từ {{minLength}}-{{maxLength}} kí tự.',
+      lengthTipTitle: 'Độ dài nên từ {{minLength}}-{{maxLength}} kí tự.',
+      noImage: 'Chưa có ảnh',
+      preview: 'Xem trước',
+      previewDescription: 'Kết quả hiển thị có thể thay đổi tuỳ theo nội dung và công cụ tìm kiếm.',
+      tooLong: 'Quá dài',
+      tooShort: 'Quá ngắn',
+    },
+  },
 }
 
 export type PluginSEOTranslations = typeof translations.en
