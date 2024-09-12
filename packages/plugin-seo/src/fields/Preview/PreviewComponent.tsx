@@ -11,8 +11,13 @@ import {
 } from '@payloadcms/ui'
 import React, { useEffect, useState } from 'react'
 
+import { defaults } from '../../defaults.js'
 import type { PluginSEOTranslationKeys, PluginSEOTranslations } from '../../translations/index.js'
 import type { GenerateURL } from '../../types.js'
+
+function getTextByMaxLength(text: string, maxLength: number) {
+  return `${text.slice(0, maxLength)}${(text.length > maxLength && '...') || ''}`
+}
 
 type PreviewProps = {
   readonly descriptionPath?: string
@@ -118,7 +123,7 @@ export const PreviewComponent: React.FC<PreviewProps> = (props) => {
               textDecoration: 'none',
             }}
           >
-            {metaTitle as string}
+            {getTextByMaxLength(metaTitle as string, defaults.title.maxLength)}
           </a>
         </h4>
         <p
@@ -126,7 +131,7 @@ export const PreviewComponent: React.FC<PreviewProps> = (props) => {
             margin: 0,
           }}
         >
-          {metaDescription as string}
+          {getTextByMaxLength(metaDescription as string, defaults.description.maxLength)}
         </p>
       </div>
     </div>

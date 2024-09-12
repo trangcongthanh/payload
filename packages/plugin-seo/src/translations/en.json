@@ -1,6 +1,7 @@
 {
   "$schema": "./translation-schema.json",
   "plugin-seo": {
+    "missing": "Missing",
     "almostThere": "Almost there",
     "autoGenerate": "Auto-generate",
     "bestPractices": "best practices",
